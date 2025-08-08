@@ -1,0 +1,36 @@
+{
+	"name": "ds_Asql",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_Asql",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "EmpID",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Name",
+				"type": "varchar"
+			},
+			{
+				"name": "Country",
+				"type": "varchar"
+			},
+			{
+				"name": "DepartmentID",
+				"type": "int",
+				"precision": 10
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "CUSTOMER"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

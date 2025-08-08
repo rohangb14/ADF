@@ -1,0 +1,9 @@
+{
+	"name": "adf-rohangb",
+	"location": "centralindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "453c8f82-dca6-4ccb-8c1d-87690899b5fd",
+		"tenantId": "1deafc84-d239-4b72-a85e-e29a60f0947e"
+	}
+}

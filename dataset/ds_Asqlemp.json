@@ -1,0 +1,32 @@
+{
+	"name": "ds_Asqlemp",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_Asql",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "EmpId",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Empname",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DeptId",
+				"type": "int",
+				"precision": 10
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "Employee"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

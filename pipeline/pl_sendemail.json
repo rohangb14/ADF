@@ -1,0 +1,54 @@
+{
+	"name": "pl_sendemail",
+	"properties": {
+		"activities": [
+			{
+				"name": "Execute Pipeline1",
+				"type": "ExecutePipeline",
+				"dependsOn": [],
+				"policy": {
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "pl_systemVariables",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": true
+				}
+			},
+			{
+				"name": "Web1",
+				"type": "WebActivity",
+				"dependsOn": [
+					{
+						"activity": "Execute Pipeline1",
+						"dependencyConditions": [
+							"Failed"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"method": "POST",
+					"url": "https://prod-29.centralindia.logic.azure.com:443/workflows/bf118fe396524f2a8f3b17e9208284b4/triggers/When_a_HTTP_request_is_received/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2FWhen_a_HTTP_request_is_received%2Frun&sv=1.0&sig=zSXWtiCAPpIN61n4Epy6ONaqt1BHbovzAZM1lPr1-NE",
+					"body": {
+						"value": "{\n\"PipelineName\":\"@{pipeline().Pipeline}\",\n\"ErrorMessage\":\"@{activity('Execute Pipeline1').Error.Message}\"\n}",
+						"type": "Expression"
+					}
+				}
+			}
+		],
+		"annotations": [],
+		"lastPublishTime": "2025-07-27T10:07:55Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}
