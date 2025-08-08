@@ -8,6 +8,9 @@
 		"ls_Asql_password": {
 			"value": ""
 		},
+		"ls_Target_password": {
+			"value": ""
+		},
 		"ls_adls_accountKey": {
 			"value": ""
 		},
@@ -33,6 +36,15 @@
 			"value": "trainingdb"
 		},
 		"ls_Asql_properties_typeProperties_userName": {
+			"value": "admin2025"
+		},
+		"ls_Target_properties_typeProperties_server": {
+			"value": "project-training-server.database.windows.net"
+		},
+		"ls_Target_properties_typeProperties_database": {
+			"value": "projectDB"
+		},
+		"ls_Target_properties_typeProperties_userName": {
 			"value": "admin2025"
 		},
 		"ls_adls_properties_typeProperties_url": {
