@@ -1,0 +1,12 @@
+{
+	"name": "ds_source1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_Asql",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": []
+	}
+}

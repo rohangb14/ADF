@@ -1,0 +1,24 @@
+{
+	"name": "AzureSqlTable1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_Target",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"stagetable": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": {
+				"value": "@dataset().stagetable",
+				"type": "Expression"
+			}
+		}
+	}
+}
