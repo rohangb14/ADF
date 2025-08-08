@@ -1,0 +1,51 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "adf-rohangb"
+		},
+		"ls_Asql_password": {
+			"value": ""
+		},
+		"ls_adls_accountKey": {
+			"value": ""
+		},
+		"ls_blob_connectionString": {
+			"value": ""
+		},
+		"ls_blob_params_connectionString": {
+			"value": ""
+		},
+		"AzureDataLakeStorage1_properties_typeProperties_url": {
+			"value": "https://adlsrohangb.dfs.core.windows.net/"
+		},
+		"ls_Akv_properties_typeProperties_baseUrl": {
+			"value": "https://akvrohangb.vault.azure.net/"
+		},
+		"ls_AkvBlob_properties_typeProperties_connectionString_secretName": {
+			"value": "Blob"
+		},
+		"ls_Asql_properties_typeProperties_server": {
+			"value": "rohangbserver.database.windows.net"
+		},
+		"ls_Asql_properties_typeProperties_database": {
+			"value": "trainingdb"
+		},
+		"ls_Asql_properties_typeProperties_userName": {
+			"value": "admin2025"
+		},
+		"ls_adls_properties_typeProperties_url": {
+			"value": "https://adlsrohangb.dfs.core.windows.net/"
+		},
+		"StorageEvent_properties_typeProperties_scope": {
+			"value": "/subscriptions/ffaee66e-34a2-4f10-8fae-81e7d074ad5c/resourceGroups/rg_rohangb/providers/Microsoft.Storage/storageAccounts/blobrohangb"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
